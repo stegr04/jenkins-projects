@@ -1,0 +1,22 @@
+#!groovy
+
+node('master') {
+
+    stage('Start pipline') { println "Start pipeline" }
+    
+    stage('Perform Unit Test') {
+        sh "echo Perform Unit Test"
+    }
+    
+    stage('Build and Copy the cucumber-java-adaptor for testing') {
+        sh "echo Build and Copy the cucumber-java-adaptor for testing"
+        sleep 1200
+    }
+    
+    stage('End pipeline') {
+        cleanWs()
+        println "End pipeline"
+    }
+}
+    
+
